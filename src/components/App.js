@@ -106,7 +106,7 @@ export default function App() {
 
   // retreive questions -- http://localhost:8000/questions
   useEffect(function () {
-    fetch("https://react-quiz-3cey.onrender.com")
+    fetch("/questions.json")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
